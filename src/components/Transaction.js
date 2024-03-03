@@ -8,12 +8,11 @@ import Section from "./Section";
 
 export default function Transaction() {
   const { id: hash } = useParams();
-
   const [transaction, setTransaction] = useState(null);
 
   useEffect(() => {
-    setTransaction(null);
     async function getTransaction() {
+      setTransaction(null);
       if (hash) {
         const transaction = await alchemy.core.getTransaction(hash);
         setTransaction(transaction);

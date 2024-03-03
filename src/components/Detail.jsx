@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import "./Detail.css";
 import Section from "./Section";
+import TransactionWebSocket from "./TransactionWebSocket";
 
 export default function Detail() {
   const location = useLocation();
@@ -20,13 +21,13 @@ export default function Detail() {
     history.push(`/${title}/${searchInput}`);
   }
 
-  let idLabel;
-  switch (title) {
-    case "block": idLabel = "block number"; break;
-    case "transaction": idLabel = "transaction hash"; break;
-    case "account": idLabel = "address"; break;
-    default: idLabel = "???"; break;
-  }
+  const idLabelMap = {
+    block: "block number",
+    transaction: "transaction hash",
+    account: "address"
+  };
+
+  const idLabel = idLabelMap[title] || "";
 
   let instructions;
   switch (title) {
@@ -48,6 +49,9 @@ export default function Detail() {
     case "transaction": {
       if (id) {
         instructions = <p>Click on a "to" or "from" address to view its balance.</p>;
+      }
+      else {
+        instructions = <TransactionWebSocket />;
       }
       break;
     }
@@ -77,4 +81,4 @@ export default function Detail() {
       {instructions}
     </Section>
   );
-};;
+};

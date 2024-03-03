@@ -3,6 +3,7 @@
   --background-hover-color: rgba(0, 0, 0, 0.03);
   --border-color: #e8e8e8;
   --color: #222;
+  --color-green: #32de84;
 
   --border-radius-round: 10px;
   --border: 1px solid var(--border-color);

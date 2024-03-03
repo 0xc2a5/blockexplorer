@@ -7,12 +7,11 @@ import Section from "./Section";
 
 export default function Account() {
   const { id: address } = useParams();
-
   const [account, setAccount] = useState(null);
 
   useEffect(() => {
-    setAccount(null);
     async function getAccount() {
+      setAccount(null);
       if (address) {
         const account = await alchemy.core.getBalance(address);
         setAccount(account);

@@ -13,7 +13,6 @@ import Detail from "./components/Detail.jsx";
 import Logo from "./components/Logo.js";
 import Transaction from "./components/Transaction.js";
 
-
 function App() {
   return (
     <Router>

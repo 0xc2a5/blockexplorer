@@ -1,0 +1,34 @@
+.TransactionWebSocket {
+  font-family: monospace;
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+
+  &>a {
+    display: block;
+    margin-left: 1.6rem;
+    width: fit-content;
+
+    &+a {
+      margin-top: 0.4rem;
+    }
+  }
+
+  &>.label {
+    align-items: center;
+    display: flex;
+
+    &>p {
+      margin: 0 0 0.6rem;
+    }
+
+    &>.dot {
+      background-color: var(--color-green);
+      border-radius: 50%;
+      display: inline-block;
+      height: 4px;
+      margin-bottom: 0.6rem;
+      margin-right: 0.6rem;
+      width: 4px;
+    }
+  }
+}

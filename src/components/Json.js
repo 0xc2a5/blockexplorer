@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./Json.css";
 
 export default function Json({ object, linkKeys, linkPrefix }) {
-  console.log(object);
   return (
     <div className="Json">
       {"{"}
@@ -13,7 +12,6 @@ export default function Json({ object, linkKeys, linkPrefix }) {
         }
 
         let formattedValue = `"${value}"`;
-
         if (linkKeys.includes(key)) {
           formattedValue = <Link to={`${linkPrefix}/${value}`}>{value}</Link>;
         }
@@ -23,7 +21,6 @@ export default function Json({ object, linkKeys, linkPrefix }) {
         else if (typeof value === "function") {
           formattedValue = `function()`;
         }
-
 
         return (
           <div className="entry" key={key}>
