@@ -84,9 +84,9 @@ function TargetBlock({ blockNumber }) {
   const [targetBlock, setTargetBlock] = useState(null);
 
   useEffect(() => {
-    setTargetBlock(null);
-    const b = parseInt(blockNumber);
     async function getTargetBlock() {
+      setTargetBlock(null);
+      const b = parseInt(blockNumber);
       const block = await alchemy.core.getBlock(b);
       setTargetBlock(block);
     }
