@@ -5,7 +5,6 @@ import Json from "./Json";
 import Loader from "./Loader";
 import Section from "./Section";
 
-
 export default function Transaction() {
   const { id: hash } = useParams();
   const [transaction, setTransaction] = useState(null);
