@@ -35,9 +35,7 @@ export default function Detail() {
       instructions = id
         ? <p>Click <Link to="/block">here</Link> to view the latest blocks.</p>
         : <>
-          <p>
-            Under Latest Blocks:
-          </p>
+          <p>Under Latest Blocks:</p>
           <ul>
             <li>Click on a block number to see its details.</li>
             <li>Click transactions to see the block's transaction hashes.</li>
@@ -47,12 +45,9 @@ export default function Detail() {
       break;
     }
     case "transaction": {
-      if (id) {
-        instructions = <p>Click on a "to" or "from" address to view its balance.</p>;
-      }
-      else {
-        instructions = <TransactionWebSocket />;
-      }
+      instructions = id
+        ? <p>Click on a "to" or "from" address to view its balance.</p>
+        : <TransactionWebSocket />;
       break;
     }
     default: instructions = ""; break;
