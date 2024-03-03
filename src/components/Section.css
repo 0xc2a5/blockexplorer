@@ -1,0 +1,8 @@
+.Section {
+  border: var(--border);
+  border-radius: var(--border-radius-round);
+
+  & h2 {
+    padding: 0 1rem;
+  }
+}

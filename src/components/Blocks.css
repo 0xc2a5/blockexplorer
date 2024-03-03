@@ -1,0 +1,23 @@
+.Blocks {
+  & details {
+    border-top: var(--border);
+
+    &>* {
+      padding: 1rem;
+    }
+
+    & summary {
+      cursor: pointer;
+      font-family: monospace;
+      font-size: 0.9rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &+* {
+        padding-top: 0;
+      }
+    }
+  }
+}
