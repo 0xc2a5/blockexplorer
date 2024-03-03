@@ -1,0 +1,63 @@
+.Detail {
+  &>* {
+    padding: 0 1rem;
+  }
+
+  &>p>a {
+    text-decoration: underline;
+  }
+
+  &>ul {
+    margin: -0.8rem 0 0;
+    padding-bottom: 1.5rem;
+    padding-left: 3rem;
+
+    &>li {
+      padding-top: 0.4rem;
+    }
+  }
+
+  &>.currentId {
+    font-family: monospace;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+  }
+}
+
+.Search {
+  border: var(--border);
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 1rem;
+  padding: 0.8rem 1.6rem;
+
+  &:focus-within {
+    border-color: var(--foreground-color);
+  }
+
+  &>button,
+  &>input {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: monospace;
+    font-size: 0.9rem;
+    outline: none;
+  }
+
+  &>button {
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &>input {
+    flex-grow: 1;
+  }
+}

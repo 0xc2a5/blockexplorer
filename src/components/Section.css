@@ -1,8 +1,12 @@
 .Section {
   border: var(--border);
   border-radius: var(--border-radius-round);
+  height: fit-content;
+  overflow: scroll;
 
-  & h2 {
+  &>h2 {
+    font-size: 1.4rem;
     padding: 0 1rem;
+    text-transform: capitalize;
   }
 }

@@ -1,16 +1,65 @@
+.Block {
+  display: grid;
+  font-family: monospace;
+  font-size: 0.75rem;
+  gap: 0.4rem 0.8rem;
+
+  & .entry {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: 1.6rem;
+
+    &>* {
+      height: fit-content;
+    }
+  }
+
+  & .Transactions {
+    &>summary {
+      cursor: pointer;
+      display: flex;
+      gap: 0.4rem;
+      list-style: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &>.transaction {
+      margin-left: 1.6rem;
+      margin-top: 0.2rem;
+    }
+  }
+}
+
+.TargetBlock {
+  &>* {
+    padding: 0 2rem 1rem;
+  }
+}
+
 .Blocks {
-  & details {
+  &>details {
     border-top: var(--border);
+    overflow-x: auto;
+
+    &:focus-within,
+    &:hover {
+      background-color: var(--background-hover-color);
+    }
 
     &>* {
       padding: 1rem;
     }
 
-    & summary {
+    &>summary {
       cursor: pointer;
       font-family: monospace;
       font-size: 0.9rem;
+      list-style: none;
 
+      &:focus,
       &:hover {
         text-decoration: underline;
       }

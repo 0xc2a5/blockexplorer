@@ -1,5 +1,7 @@
+import "./Loader.css";
+
 export default function Loader({ condition, component }) {
   return condition
     ? component
-    : <div>Loading...</div>;
+    : <div className="Loader">Loading...</div>;
 }

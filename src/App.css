@@ -1,22 +1,49 @@
 .App {
   color: var(--color);
-}
 
-header {
-  background-color: var(--background-color);
-  border-bottom: var(--border);
-  padding: var(--page-padding);
-  position: sticky;
-  top: 0;
+  &>header {
+    align-items: center;
+    background-color: var(--background-color);
+    border-bottom: var(--border);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem var(--page-padding);
+    position: sticky;
+    top: 0;
 
-  & h1 {
-    font-size: 1.2rem;
-    margin: 0;
-    user-select: none;
+
+    &>h1 {
+      align-items: center;
+      display: flex;
+      font-size: 1.2rem;
+      gap: 0.6rem;
+      margin: 0;
+      user-select: none;
+    }
+
+    &>nav {
+      display: flex;
+      gap: 2rem;
+
+      &>a {
+        opacity: 0.6;
+      }
+
+      &>a.active {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
   }
-}
 
-main {
-  margin: 2rem 0;
-  padding: var(--page-padding);
+  &>main {
+    display: grid;
+    gap: 2rem;
+    grid: auto / repeat(auto-fit, minmax(300px, 1fr));
+    padding: var(--page-padding);
+
+    &>* {
+      min-width: 200px;
+    }
+  }
 }
