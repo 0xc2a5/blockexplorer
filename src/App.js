@@ -9,7 +9,7 @@ import {
 import "./App.css";
 import Account from "./components/Account.js";
 import Blocks from "./components/Blocks.js";
-import Detail from "./components/Detail.jsx";
+import Detail from "./components/Detail.js";
 import Logo from "./components/Logo.js";
 import Transaction from "./components/Transaction.js";
 
