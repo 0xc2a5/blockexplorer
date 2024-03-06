@@ -131,10 +131,10 @@ function LatestBlocks() {
   const rows = blockNumbers.map(b => (
     <details key={b}>
       <summary onClick={() => getBlock(b)}>{b}</summary>
-      {<Loader
+      <Loader
         component={<Block block={blocks.get(b)} />}
         condition={blocks.has(b)}
-      />}
+      />
     </details>
   ));
 
